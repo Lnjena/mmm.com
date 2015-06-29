@@ -2,42 +2,33 @@ package com.mmm.partner.domain;
 
 import java.io.Serializable;
 
-import org.springframework.data.mongodb.core.mapping.Document;
+import com.mmm.common.domain.Address;
+import com.mmm.common.domain.Contact;
 
-@Document(collection = "partner")
 public class Partner implements Serializable {
 
 	private static final long serialVersionUID = 5218143967349070770L;
 
-	private Long partnerId;
-	private Long addressId;
-	private Long contactId;
+	private Address address;
+	private Contact contact;
 	private String partnerType;
 	private String partnerRegistrationNumber;
 	private String partnerName;
 
-	public Long getPartnerId() {
-		return partnerId;
+	public Address getAddress() {
+		return address;
 	}
 
-	public void setPartnerId(Long partnerId) {
-		this.partnerId = partnerId;
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
-	public Long getAddressId() {
-		return addressId;
+	public Contact getContact() {
+		return contact;
 	}
 
-	public void setAddressId(Long addressId) {
-		this.addressId = addressId;
-	}
-
-	public Long getContactId() {
-		return contactId;
-	}
-
-	public void setContactId(Long contactId) {
-		this.contactId = contactId;
+	public void setContact(Contact contact) {
+		this.contact = contact;
 	}
 
 	public String getPartnerType() {
@@ -63,4 +54,5 @@ public class Partner implements Serializable {
 	public void setPartnerName(String partnerName) {
 		this.partnerName = partnerName;
 	}
+	
 }

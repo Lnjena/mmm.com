@@ -2,32 +2,18 @@ package com.mmm.common.domain;
 
 import java.io.Serializable;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
-
-@Document(collection = "address")
 public class Address implements Serializable {
 
 	private static final long serialVersionUID = -8485856064060081344L;
 
-	@Id
-	private Long addressId;
 	private String addressDescription;
 	private String addressLine1;
 	private String addressLine2;
 	private String addressLine3;
 	private String city;
-	private String state;
-	private String country;
+	private String stateId;
+	private String countryId;
 	private String postCode;
-
-	public Long getAddressId() {
-		return addressId;
-	}
-
-	public void setAddressId(Long addressId) {
-		this.addressId = addressId;
-	}
 
 	public String getAddressDescription() {
 		return addressDescription;
@@ -69,20 +55,20 @@ public class Address implements Serializable {
 		this.city = city;
 	}
 
-	public String getState() {
-		return state;
+	public String getStateId() {
+		return stateId;
 	}
 
-	public void setState(String state) {
-		this.state = state;
+	public void setStateId(String stateId) {
+		this.stateId = stateId;
 	}
 
-	public String getCountry() {
-		return country;
+	public String getCountryId() {
+		return countryId;
 	}
 
-	public void setCountry(String country) {
-		this.country = country;
+	public void setCountryId(String countryId) {
+		this.countryId = countryId;
 	}
 
 	public String getPostCode() {
@@ -92,4 +78,5 @@ public class Address implements Serializable {
 	public void setPostCode(String postCode) {
 		this.postCode = postCode;
 	}
+
 }
