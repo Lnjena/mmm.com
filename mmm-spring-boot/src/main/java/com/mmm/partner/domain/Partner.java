@@ -11,7 +11,6 @@ public class Partner implements Serializable {
 
 	private Address address;
 	private Contact contact;
-	private String partnerType;
 	private String partnerRegistrationNumber;
 	private String partnerName;
 
@@ -29,14 +28,6 @@ public class Partner implements Serializable {
 
 	public void setContact(Contact contact) {
 		this.contact = contact;
-	}
-
-	public String getPartnerType() {
-		return partnerType;
-	}
-
-	public void setPartnerType(String partnerType) {
-		this.partnerType = partnerType;
 	}
 
 	public String getPartnerRegistrationNumber() {

@@ -3,6 +3,7 @@ package com.mmm.partner.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,8 +23,20 @@ public class CustomerController implements ICRUDController<Customer, String> {
 		customerRepository.save(customer);
 	}
 
-	
 	public List<Customer> findAll() {
 		return customerRepository.findAll();
+	}
+
+	public Customer findById(@PathVariable String id) {
+		return customerRepository.findOne(id);
+	}
+
+	public void update(@RequestBody Customer domain, @PathVariable String id) {
+		domain.setCustomerId(id);
+		customerRepository.save(domain);
+	}
+
+	public void delete(@PathVariable String id) {
+		customerRepository.delete(id);	
 	}
 }
