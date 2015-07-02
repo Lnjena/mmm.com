@@ -31,9 +31,9 @@ public class CustomerController implements ICRUDController<Customer, String> {
 		return customerRepository.findOne(id);
 	}
 
-	public void update(@RequestBody Customer domain, @PathVariable String id) {
-		domain.setCustomerId(id);
-		customerRepository.save(domain);
+	public void update(@RequestBody Customer customer, @PathVariable String id) {
+		customer.setCustomerId(id);
+		customerRepository.save(customer);
 	}
 
 	public void delete(@PathVariable String id) {
