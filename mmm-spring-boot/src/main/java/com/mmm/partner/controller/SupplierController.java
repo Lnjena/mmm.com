@@ -13,7 +13,7 @@ import com.mmm.partner.domain.Supplier;
 import com.mmm.partner.repository.SupplierRepository;
 
 @RestController
-@RequestMapping(value = "/vendor")
+@RequestMapping(value = "/supplier")
 public class SupplierController implements ICRUDController<Supplier, String> {
 
 	@Autowired

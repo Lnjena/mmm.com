@@ -13,7 +13,7 @@ import com.mmm.partner.domain.User;
 import com.mmm.partner.repository.UserRepository;
 
 @RestController
-@RequestMapping(value = "/vendor")
+@RequestMapping(value = "/user")
 public class UserController implements ICRUDController<User, String> {
 
 	@Autowired
